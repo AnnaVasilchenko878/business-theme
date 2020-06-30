@@ -1,4 +1,4 @@
-// ====================variables
+//!! ====================variables
 
 $btn-links-color: #ffbb42;
 $btn-border-color: #e7ad48;
@@ -24,7 +24,7 @@ $border-color: #ccd5df;
 $border-secondary-color: #cbcbcb;
 $border-footer-nav: #e3e7ec;
 
-// ======================fonts 
+//!! ======================fonts 
 
 @font-face {
   font-family: "Lato";
@@ -62,7 +62,49 @@ $border-footer-nav: #e3e7ec;
   url("../fonts/OpenSans-Regular.woff2") format(woff2);
 }
 
-// ============defaultstyles
+//!! =================mixins
+
+@mixin btn-default {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: $text-secondary-color;
+  background-color: $btn-links-color;
+  border: none;
+  border-radius: 2px;
+}
+
+@mixin btn-state {
+  &:hover,
+  &:focus {
+    color: $text-links-color;
+    background-color: $hover-btn-color;
+  }
+  &:active {
+    background-color: $active-btn-color;
+  }
+}
+@mixin links-default {
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+@mixin title {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 22px;
+  color: $text-title-color;
+  text-transform: uppercase;
+  text-align: center;
+}
+@mixin subtitle {
+  font-size: 22px;
+  line-height: 22px;
+  text-align: center;
+  color: $text-title-color;
+}
+// !!============defaultstyles
 
 html {
     box-sizing: border-box;
@@ -116,7 +158,7 @@ html {
   }
 }
 
-// ==============header
+//!! ==============header
 
 .header {
   padding-left: 362px;
@@ -128,7 +170,7 @@ html {
 }
 .header__logo {
   width: 50px;
-  margin-right: 406px;;
+  margin-right: 406px;
 }
 .header__list {
   width: 1296px;
@@ -136,7 +178,7 @@ html {
   margin-top: 15px;
 }
 
-//=========nav
+//!!!=========nav
 .nav__item {
   width: 135px;
   margin-right: 15px;
@@ -179,14 +221,14 @@ html {
 }
 
 .nav__link {
+  @include links-default;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: $text-links-color;
-  text-transform: uppercase;
 }
 
-// ======== promo
+// !!======== promo
 .promo {
   background-color: $bg-blue-color;
   text-align: center;
@@ -203,10 +245,9 @@ html {
   color: $text-secondary-color;
   margin-bottom: -8px;
   text-transform: uppercase;
-
 }
 .promo__text {
-  font-size: 22px;
+  @include subtitle;
   color: $text-secondary-color;
   margin-bottom: 44px;
 }
@@ -259,22 +300,10 @@ html {
   }
 }
 .promo__button {
-  font-size: 14px;
-  color: $text-secondary-color;
-  background-color: $btn-links-color;
-  padding: 21px 72px 25px 77px;
-  border: none;
-  text-transform: uppercase;
-  border-radius: 2px;
+  @include btn-default;
+  @include btn-state;
+  padding: 21px 43px 21px 53px;
   margin-left: -4px;
-  &:hover,
-  &:focus {
-    color: $text-links-color;
-    background-color: $hover-btn-color;
-  }
-  &:active {
-    background-color: $active-btn-color;
-  }
 }
 .promo__image {
   position: absolute;
@@ -283,30 +312,22 @@ html {
   top: 412px;
   left: 701px;
 }
-//===========our-services
+//!!!===========our-services
 .our-services {
   padding-bottom: 63px;
   padding-top: 37px;
 }
 
 .our-services__title {
-  font-family: "Lato", "Arial", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  color: $text-title-color;
-  text-align: center;
-  text-transform: uppercase;
+  @include title;
   margin-bottom: -12px;
 }
 .our-services__text {
-  font-size: 22px;
-  line-height: 22px;
-  color: $text-title-color;
-  text-align: center;
+@include subtitle;
   margin-bottom: 66px;
 }
 
-// ============ services
+//!! ============ services
 
 .services {
   display: flex;
@@ -375,7 +396,7 @@ html {
 .services__text {
   font-size: 19px;
 }
-// ===============about-us
+//!! ===============about-us
 
 .about-us {
   color: $text-secondary-color;
@@ -392,11 +413,10 @@ html {
   padding-left: 109px;
 }
 .about-us__title {
-  font-family: "Lato", "Arial", sans-serif;
+  @include title;
+  text-align: left;
   font-size: 37px;
-  font-weight: 700;
-  line-height: 22px;
-  text-transform: uppercase;
+  color: $text-secondary-color;
   margin-bottom: 32px;
 }
 .about-us__text {
@@ -406,11 +426,10 @@ html {
   line-height: 31px;
 }
 .about-us__link {
+  @include links-default;
   color: $text-secondary-color;
-  text-transform: uppercase;
-  padding: 21px 69px 22px 41px;
+  padding: 21px 65px 22px 57px;
   border: 1px solid $btn-border-color;
-  border-radius: 2px;
   &:hover,
   &:focus {
     background-color: $hover-links-color;
@@ -421,7 +440,7 @@ html {
   }
 }
 
-// ================price
+//!! ================price
 
 .price {
   background-color: $bg-grey-color;
@@ -429,19 +448,16 @@ html {
   padding-bottom: 259px;
 }
 .price__title {
-  font-family: "Lato", "Arial", sans-serif;
-  font-size: 40px;
-  line-height: 22px;
-  color: $text-title-color;
-  text-align: center;
-  text-transform: uppercase;
+  @include title;
   margin-bottom: -11px;
 }
 .price__text {
-  font-size: 23px;
-  text-align: center;
+ @include subtitle;
   margin-bottom: 105px;
 }
+
+//!! ==============price-card
+
 .price-card {
   font-family: "Lato", "Arial", sans-serif;
   color: $text-card-color;
@@ -498,21 +514,13 @@ html {
   margin-bottom: 37px;
   font-size: 18px;
 }
-.price-structure {
-  margin-bottom: 42px;
-}
-.price-structure__item {
-  border-top: 1px solid $border-color; 
-  padding-top: 14px;
-  padding-bottom: 12px;
-  font-size: 17px;
-}
 .price-card__link {
+  @include links-default;
   color: $text-secondary-color;
   background-color: $btn-links-color;
   padding: 19px 22px;
-  border-radius: 2px;
   font-size: 16px;
+
   &:hover,
   &:focus {
     color: $text-links-color;
@@ -525,26 +533,30 @@ html {
   }
 }
 
-// =================how-works
+// !!===========price-structure
+
+.price-structure {
+  margin-bottom: 42px;
+}
+.price-structure__item {
+  border-top: 1px solid $border-color; 
+  padding-top: 14px;
+  padding-bottom: 12px;
+  font-size: 17px;
+}
+
+//!!! =================how-works
 
 .how-works {
   padding-top: 176px;
   padding-bottom: 216px;
 }
 .how-works__title {
-  font-family: "Lato", "Arial",sans-serif;
-  font-size: 41px;
-  line-height: 22px;
-  color: $text-title-color;
-  text-align: center;
-  text-transform: uppercase;
+  @include title;
   margin-bottom: -9px;
 }
 .how-works__text {
-  font-family: "Lato", "Arial", sans-serif;
-  font-size: 23px;
-  line-height: 22px;
-  text-align: center;
+@include subtitle;
   margin-bottom: 335px;
 }
 .how-works__wrapper {
@@ -553,11 +565,10 @@ html {
 }
 
 .how-works__link {
-  text-transform: uppercase;
+  @include links-default;
   color: $text-secondary-color;
   background-color: $btn-links-color;
   padding: 20px 45px 21px 37px;
-  border-radius: 2px;
   font-size: 17px;
   margin-left: 15px;
   &:hover,
@@ -571,7 +582,7 @@ html {
     border-radius: 2px;
   }
 }
-// =================works 
+// !!=================works 
 
 .works {
   display: flex;
@@ -633,29 +644,25 @@ html {
   font-size: 19px;
   line-height: 30px;
 }
-// ========================reviews 
+// !!========================reviews 
 
 .reviews {
   background-color: $bg-orange-color;
   color: $text-secondary-color;
-  text-align: center;
   padding-top: 159px;
   padding-bottom: 185px;
 }
 .reviews__title {
-  font-weight: 700;
-  line-height: 22px;
-  font-size: 40px;
-  text-transform: uppercase;
-  margin-bottom: -9px;
+@include title;
+color: $text-secondary-color;
+margin-bottom: -9px;
 }
 .reviews__text {
-  font-size: 22px;
-  line-height: 22px;
+  @include subtitle;
+  color: $text-secondary-color;
   margin-bottom: 79px;
 }
-
-// ==========================client-reviews
+// !!==========================client-reviews
 .client-reviews {
   display: flex;
   flex-wrap: wrap;
@@ -718,39 +725,26 @@ html {
   text-transform: uppercase;
   font-style: normal;
   color: $text-autor-color;
-  margin-left: -115px;
+  margin-left: 41px;
   font-size: 18px;
-
-  &--madam {
-    margin-left: -86px;
-  }
-  &--clips {
-    margin-left: -165px;
-  }
-  &--zam {
-    margin-left: -217px;
-  }
 }
 .client-reviews__position {
   color: $text-placeholder-color;
 }
 
-// =========================newsletter
+// !!!=========================newsletter
 
 .newsletter {
   color: $text-title-color;
-  text-align: center;
-  line-height: 22px;
   padding-top: 177px;
   padding-bottom: 53px;
 }
 .newsletter__title {
-  text-transform: uppercase;
-  font-size: 40px;
+  @include title;
   margin-bottom: -8px;
 }
 .newsletter__text {
-  font-size: 22px;
+ @include subtitle;
   margin-bottom: 53px;
 }
 .newsletter__list {
@@ -800,27 +794,13 @@ html {
   }
 }
 .newsletter__button {
-  font-family: "Lato", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  text-transform: uppercase;
-  color: $text-secondary-color;
-  background-color: $btn-links-color;
+  @include btn-default;
+  @include btn-state;
   padding: 22px 79px 19px 69px;
-  border: none;
-  border-radius: 2px;
   margin-left: 106px;
-  &:hover,
-  &:focus {
-    color: $text-links-color;
-    background-color: $hover-btn-color;
-  }
-  &:active {
-    background-color: $active-btn-color;
-  }
 }
 
-// ==========adress
+// !!==========adress
 
 .address {
   color: $text-address-color;
@@ -855,7 +835,7 @@ html {
   color: $btn-links-color;
 }
 
-// ===============map
+// !!===============map
 .map {
   position: relative;
   padding-top: 23px;
@@ -869,12 +849,12 @@ html {
   top: 338px;
   left: 763px;
 }
-// =============footer============
+// !!=============footer============
 .footer {
   position: relative;
 }
 
-// ===================footer-nav
+// !!===================footer-nav
 .footer-nav {
   display: flex;
   margin-bottom: 28px;
@@ -945,7 +925,7 @@ html {
   }
 }
 
-// ===============social
+//!! ===============social
 
 .social {
   display: flex;
@@ -961,7 +941,7 @@ html {
     fill: $btn-links-color;
   }
 }
-// ==============footer-copyright 
+//!!! ==============footer-copyright 
 
 .footer-copyright {
   background-color: $bg-blue-color;

@@ -1,0 +1,35 @@
+.how-works {
+    padding-top: 176px;
+    padding-bottom: 216px;
+  }
+  .how-works__title {
+    @include title;
+    margin-bottom: -9px;
+  }
+  .how-works__text {
+  @include subtitle;
+    margin-bottom: 335px;
+  }
+  .how-works__wrapper {
+    width: 250px;
+    margin: 0 auto;
+  }
+  
+  .how-works__link {
+    @include links-default;
+    color: $text-secondary-color;
+    background-color: $btn-links-color;
+    padding: 20px 45px 21px 37px;
+    font-size: 17px;
+    margin-left: 15px;
+    &:hover,
+    &:focus {
+      color: $text-links-color;
+      background-color: $hover-btn-color;
+    }
+    &:active {
+      background-color: $active-btn-color;
+      border: 1px solid $text-links-color;
+      border-radius: 2px;
+    }
+  }

@@ -1,0 +1,42 @@
+ 
+  .about-us {
+    color: $text-secondary-color;
+    background-color: $bg-orange-color;
+    display: flex;
+    margin-bottom: -9px;
+  }
+  .about-us__img {
+    width: 1133px;
+  }
+  .about-us__wrapper{
+    width: 850px;
+    padding-top: 192px;
+    padding-left: 109px;
+  }
+  .about-us__title {
+    @include title;
+    text-align: left;
+    font-size: 37px;
+    color: $text-secondary-color;
+    margin-bottom: 32px;
+  }
+  .about-us__text {
+    width: 699px;
+    margin-bottom: 90px;
+    font-size: 18px;
+    line-height: 31px;
+  }
+  .about-us__link {
+    @include links-default;
+    color: $text-secondary-color;
+    padding: 21px 65px 22px 57px;
+    border: 1px solid $btn-border-color;
+    &:hover,
+    &:focus {
+      background-color: $hover-links-color;
+      color: $text-links-color;
+    }
+    &:active {
+      background-color: $btn-border-color;
+    }
+  }

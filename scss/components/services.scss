@@ -1,0 +1,67 @@
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 463px;
+}
+.services__item {
+    width: 576px;
+    margin-right: 246px;
+    margin-bottom: 62px;
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      width: 58px;
+      height: 71px;
+      background-image: url("../img/icon-font-awesome.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 13px;
+      left: -107px;
+    }
+    &--gear {
+      &::before{
+        top: 12px;
+        left: -109px;
+      background-image: url("../img/icon-gear.svg");
+      }
+    }
+    &--graduation {
+      &::before {
+        width: 73px;
+        top: 10px;
+        left: -106px;
+        background-image: url("../img/icon-graduation.svg");
+      }
+    }
+    &--rocket {
+      &::before {
+        background-image: url("../img/icon-rocket.svg");
+      }
+    }
+    &--renren {
+      margin-top: -28px;
+      &::before {
+        background-image: url("../img/icon-renren.svg");
+      }
+    }
+    &--dollar {
+      margin-top: -28px;
+      &::before {
+        left: -99px;
+        background-image: url("../img/icon-dollar.svg");
+      }
+    }
+}
+  .services__title {
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    color: $text-title-color;
+    text-transform: uppercase;
+  }
+  .services__text {
+    font-size: 19px;
+  }

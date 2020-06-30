@@ -1,0 +1,74 @@
+.price-card {
+    font-family: "Lato", "Arial", sans-serif;
+    color: $text-card-color;
+    text-transform: uppercase;
+    display: flex;
+    padding-left: 353px;
+  }
+  .price-card__item {
+    width: 479px;
+    background-color: $bg-main-color;
+    padding: 44px 106px 76px 141px;
+    margin-right: 5px;
+    text-align: center;
+    border: 1px solid $border-color;
+    &--premium {
+      padding-left: 89px;
+    }
+    &:hover,
+    &:focus {
+      background-color: $bg-blue-color;
+      color: $bg-main-color;
+      transform: scale(1.2);
+    }
+  }
+  .price-card__title{
+    font-weight: 300;
+    font-size: 29px;
+    margin-bottom: 65px;
+  }
+  .price-card__cost {
+    font-size: 79px;
+    line-height: 22px;
+    color: $btn-links-color;
+    display: block;
+    margin-bottom: 26px;
+    position: relative;
+    padding-left: 28px;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      width: 21px;
+      height: 37px;
+      background-image: url("../img/icon-price-dollar.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      top: -24px;
+      left: 58px;
+    }
+  }
+  .price-card__time {
+    font-weight: 300;
+    display: block;
+    margin-bottom: 37px;
+    font-size: 18px;
+  }
+  .price-card__link {
+    @include links-default;
+    color: $text-secondary-color;
+    background-color: $btn-links-color;
+    padding: 19px 22px;
+    font-size: 16px;
+  
+    &:hover,
+    &:focus {
+      color: $text-links-color;
+      background-color: $hover-second-links;
+    }
+    &:active {
+      background-color: $hover-links-color;
+      border: 1px solid $hover-second-links;
+      border-radius: 2px;
+    }
+  }

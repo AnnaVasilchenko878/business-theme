@@ -1,0 +1,60 @@
+.works {
+    display: flex;
+    padding-left: 381px;
+    margin-bottom: 22px;
+  }
+  .works__item {
+    text-align: center;
+    width: 303px;
+    margin-bottom: 91px;
+    margin-right: 100px;
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      width: 86px;
+      height: 96px;
+      background-image: url("../img/icon-headphones.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      top: -197px;
+      left: 110px;
+    }
+    &--lock-open {
+      &::before {
+        left: 117px;
+        background-image: url("../img/icon-lock-open.svg");
+      }
+    }
+    &--upload {
+      &::before {
+        width: 104px;
+        height: 104px;
+        top: -200px;
+        left: 95px;
+        background-image: url("../img/icon-upload.svg");
+      }
+    }
+  &--like {
+    &::before {
+      height: 89px;
+      top: -191px;
+      left: 100px;
+      background-image: url("../img/icon-like.svg");
+    }
+  }
+  }
+  .works__title {
+    font-family: "Lato","Arial", sans-serif;
+    font-weight: 700;
+    line-height: 22px;
+    color: $text-title-color;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    font-size: 25px;
+  } 
+  .works__text {
+    font-size: 19px;
+    line-height: 30px;
+  }

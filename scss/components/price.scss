@@ -1,0 +1,13 @@
+.price {
+    background-color: $bg-grey-color;
+    padding-top: 151px;
+    padding-bottom: 259px;
+  }
+  .price__title {
+    @include title;
+    margin-bottom: -11px;
+  }
+  .price__text {
+   @include subtitle;
+    margin-bottom: 105px;
+  }

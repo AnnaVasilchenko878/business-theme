@@ -1,0 +1,32 @@
+.address {
+    color: $text-address-color;
+    line-height: 24px;
+    text-align: center;
+    background-color: $text-title-color;
+    border-radius: 50%;
+    width: 376px;
+    height: 372px;
+    padding: 65px 68px 60px 79px;
+    position: absolute;
+    top: 6905px;
+    left: 945px;
+    z-index: 1;
+  }
+  .address__title {
+    font-family: "Lato", "Arial", sans-serif;
+    font-weight: 700;
+    color: $text-secondary-color;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: -4px;
+  }
+  .address__text {
+    font-size: 19px;
+      text-align: center;
+      line-height: 32px;
+      width: 208px;
+      padding-left: 22px;
+  }
+  .address__link {
+    color: $btn-links-color;
+  }

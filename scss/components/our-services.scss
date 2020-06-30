@@ -1,0 +1,13 @@
+.our-services {
+    padding-bottom: 63px;
+    padding-top: 37px;
+  }
+  
+  .our-services__title {
+    @include title;
+    margin-bottom: -12px;
+  }
+  .our-services__text {
+  @include subtitle;
+    margin-bottom: 66px;
+}
