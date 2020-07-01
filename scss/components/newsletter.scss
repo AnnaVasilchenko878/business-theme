@@ -1,65 +1,75 @@
 .newsletter {
-    color: $text-title-color;
-    padding-top: 177px;
-    padding-bottom: 53px;
+  color: $text-title-color;
+  padding-top: 177px;
+  padding-bottom: 53px;
+}
+
+.newsletter__title {
+  @include title;
+  margin-bottom: -8px;
+}
+
+.newsletter__text {
+  @include subtitle;
+  margin-bottom: 53px;
+}
+
+.newsletter__list {
+  display: flex;
+  padding-left: 509px;
+}
+
+.newsletter__item {
+  width: 400px;
+  position: relative;
+  margin-right: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 20px;
+    left: 21px;
   }
-  .newsletter__title {
-    @include title;
-    margin-bottom: -8px;
-  }
-  .newsletter__text {
-   @include subtitle;
-    margin-bottom: 53px;
-  }
-  .newsletter__list {
-    display: flex;
-    padding-left: 509px;
-  }
-  .newsletter__item {
-    width: 400px;
-    position: relative;
-    margin-right: 24px;
-  
+
+  &--user {
     &::before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 18px;
-      background-repeat: no-repeat;
-      background-position: center;
-      top: 20px;
-      left: 21px;
-    }
-    &--user {
-      &::before {
-        background-image: url("../img/icon-user.svg");
-      }
-    }
-    &--email {
-      &::before {
-        top: 22px;
-        left: 23px;
-        background-image: url("../img/icon-envelope.svg");
-      }
+      background-image: url("../img/icon-user.svg");
     }
   }
-  .newsletter__input {
-    padding: 26px 181px 19px 59px;
-    border: 1px solid $border-secondary-color;
-    border-radius: 2px;
-    &::placeholder {
-      color: $text-placeholder-color;
-      font-size: 16px;
-      text-transform: capitalize;
-    }
-    &--email {
-      padding-right: 285px;
-      padding-left: 62px;
+
+  &--email {
+    &::before {
+      top: 22px;
+      left: 23px;
+      background-image: url("../img/icon-envelope.svg");
     }
   }
-  .newsletter__button {
-    @include btn-default;
-    @include btn-state;
-    padding: 22px 79px 19px 69px;
-    margin-left: 106px;
+}
+
+.newsletter__input {
+  padding: 26px 181px 19px 59px;
+  border: 1px solid $border-secondary-color;
+  border-radius: 2px;
+
+  &::placeholder {
+    color: $text-placeholder-color;
+    font-size: 16px;
+    text-transform: capitalize;
   }
+
+  &--email {
+    padding-right: 285px;
+    padding-left: 62px;
+  }
+}
+
+.newsletter__button {
+  @include btn-default;
+  @include btn-state;
+  padding: 22px 79px 19px 69px;
+  margin-left: 106px;
+}

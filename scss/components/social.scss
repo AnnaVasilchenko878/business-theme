@@ -1,14 +1,17 @@
 .social {
-    display: flex;
-    padding-left: 1063px;
+  display: flex;
+  padding-left: 1063px;
+}
+
+.social__item {
+  width: 16px;
+  margin-right: 24px;
+}
+
+.social__icon {
+  fill: $bg-blue-color;
+
+  &:hover {
+    fill: $btn-links-color;
   }
-  .social__item {
-    width: 16px;
-    margin-right: 24px;
-  }
-  .social__icon {
-    fill: $bg-blue-color;
-    &:hover {
-      fill: $btn-links-color;
-    }
-  }
+}

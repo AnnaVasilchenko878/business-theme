@@ -1,68 +1,74 @@
 .client-reviews {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 353px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 353px;
+}
+
+.client-reviews__item {
+  background-color: $bg-main-color;
+  color: $text-main-color;
+  width: 756px;
+  margin-right: 49px;
+  margin-bottom: 27px;
+  padding-top: 56px;
+  padding-left: 39px;
+  padding-bottom: 62px;
+  display: flex;
+}
+
+.client-reviews__img {
+  border-radius: 50%;
+  width: 164px;
+  margin-right: 46px;
+}
+
+.client-reviews__wrapper {
+  width: 530px;
+  margin-left: -45px;
+}
+
+.client-reviews__quote {
+  text-align: left;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 18px;
+  margin-top: 5px;
+  line-height: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 9px;
+    background-image: url("../img/icon-start-quote.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 1px;
+    left: -21px;
   }
-  .client-reviews__item {
-    background-color: $bg-main-color;
-    color: $text-main-color;
-    width: 756px;
-    margin-right: 49px;
-    margin-bottom: 27px;
-    padding-top: 56px;
-    padding-left: 39px;
-    padding-bottom: 62px;
-    display: flex;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 9px;
+    background-image: url("../img/icon-end-quote.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 135px;
+    left: 193px;
   }
-  .client-reviews__img {
-    border-radius: 50%;
-    width: 164px;
-    margin-right: 46px;
-  }
-  .client-reviews__wrapper {
-    width: 530px;
-    margin-left: -45px;
-  }
-  .client-reviews__quote {
-    text-align: left;
-    margin-bottom: 20px;
-    position: relative;
-    font-size: 18px;
-    margin-top: 5px;
-    line-height: 30px;
-  
-    &::before {
-      content: "";
-      position: absolute;
-      width: 11px;
-      height: 9px;
-      background-image: url("../img/icon-start-quote.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      top: 1px;
-      left: -21px;
-    }
-  
-    &::after {
-      content: "";
-      position: absolute;
-      width: 11px;
-      height: 9px;
-      background-image: url("../img/icon-end-quote.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      top: 135px;
-      left: 193px;
-    }
-  }
-  .client-reviews__autor {
-    font-family: "Lato", "Arial", sans-serif;
-    text-transform: uppercase;
-    font-style: normal;
-    color: $text-autor-color;
-    margin-left: 41px;
-    font-size: 18px;
-  }
-  .client-reviews__position {
-    color: $text-placeholder-color;
-  }
+}
+
+.client-reviews__autor {
+  font-family: "Lato", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  color: $text-autor-color;
+  margin-left: 41px;
+  font-size: 18px;
+}
+
+.client-reviews__position {
+  color: $text-placeholder-color;
+}

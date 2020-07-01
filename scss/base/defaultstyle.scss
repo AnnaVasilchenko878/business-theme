@@ -1,12 +1,12 @@
 html {
-    box-sizing: border-box;
-  
+  box-sizing: border-box;
+
   *,
   *::before,
   *::after {
     box-sizing: inherit;
   }
-  
+
   body {
     padding: 0;
     width: 2267px;
@@ -14,36 +14,39 @@ html {
     font-weight: 400;
     font-size: 13px;
     line-height: 27px;
-    font-family: "Open Sans","Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     background-color: $bg-main-color;
     color: $text-main-color;
 
-  main {
-    position: relative;
-  }
+    main {
+      position: relative;
+    }
+
     a {
       text-decoration: none;
     }
+
     ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
+      padding: 0;
+      margin: 0;
+      list-style: none;
     }
+
     .visually-hidden:not(:focus):not(:active),
     input[type="checkbox"].visually-hidden,
     input[type="radio"].visually-hidden {
       position: absolute;
-  
+
       width: 1px;
       height: 1px;
       margin: -1px;
       padding: 0;
       overflow: hidden;
-  
+
       white-space: nowrap;
-  
+
       border: 0;
-  
+
       clip: rect(0, 0, 0, 0);
       clip-path: inset(100%);
     }

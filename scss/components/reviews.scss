@@ -1,16 +1,18 @@
 .reviews {
-    background-color: $bg-orange-color;
-    color: $text-secondary-color;
-    padding-top: 159px;
-    padding-bottom: 185px;
-  }
-  .reviews__title {
+  background-color: $bg-orange-color;
+  color: $text-secondary-color;
+  padding-top: 159px;
+  padding-bottom: 185px;
+}
+
+.reviews__title {
   @include title;
   color: $text-secondary-color;
   margin-bottom: -9px;
-  }
-  .reviews__text {
-    @include subtitle;
-    color: $text-secondary-color;
-    margin-bottom: 79px;
-  }
+}
+
+.reviews__text {
+  @include subtitle;
+  color: $text-secondary-color;
+  margin-bottom: 79px;
+}
