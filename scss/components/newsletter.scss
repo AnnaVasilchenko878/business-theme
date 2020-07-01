@@ -1,7 +1,7 @@
 .newsletter {
-  color: $text-title-color;
   padding-top: 177px;
   padding-bottom: 53px;
+  color: $text-title-color;
 }
 
 .newsletter__title {
@@ -20,19 +20,19 @@
 }
 
 .newsletter__item {
-  width: 400px;
   position: relative;
+  width: 400px;
   margin-right: 24px;
 
   &::before {
-    content: "";
     position: absolute;
-    width: 20px;
-    height: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
     top: 20px;
     left: 21px;
+    width: 20px;
+    height: 18px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--user {
@@ -56,9 +56,9 @@
   border-radius: 2px;
 
   &::placeholder {
+    text-transform: capitalize;
     color: $text-placeholder-color;
     font-size: 16px;
-    text-transform: capitalize;
   }
 
   &--email {
@@ -70,6 +70,6 @@
 .newsletter__button {
   @include btn-default;
   @include btn-state;
-  padding: 22px 79px 19px 69px;
   margin-left: 106px;
+  padding: 22px 79px 19px 69px;
 }

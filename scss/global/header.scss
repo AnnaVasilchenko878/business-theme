@@ -1,17 +1,21 @@
 .header {
-    padding-left: 362px;
-    padding-top: 22px;
-    padding-bottom: 36px;
-  }
-  .header__wrapper {
-    display: flex;
-  }
-  .header__logo {
-    width: 50px;
-    margin-right: 406px;;
-  }
-  .header__list {
-    width: 1296px;
-    display: flex;
-    margin-top: 15px;
-  }
+  padding-top: 22px;
+  padding-left: 362px;
+  padding-bottom: 36px;
+}
+
+.header__wrapper {
+  display: flex;
+}
+
+.header__logo {
+  width: 50px;
+  margin-right: 406px;
+  ;
+}
+
+.header__list {
+  display: flex;
+  width: 1296px;
+  margin-top: 15px;
+}

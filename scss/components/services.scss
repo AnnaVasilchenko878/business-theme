@@ -5,21 +5,21 @@
 }
 
 .services__item {
+  position: relative;
   width: 576px;
   margin-right: 246px;
   margin-bottom: 62px;
-  position: relative;
 
   &::before {
-    content: "";
     position: absolute;
+    top: 13px;
+    left: -107px;
     width: 58px;
     height: 71px;
+    content: "";
     background-image: url("../img/icon-font-awesome.svg");
     background-repeat: no-repeat;
     background-position: center;
-    top: 13px;
-    left: -107px;
   }
 
   &--gear {
@@ -32,9 +32,9 @@
 
   &--graduation {
     &::before {
-      width: 73px;
       top: 10px;
       left: -106px;
+      width: 73px;
       background-image: url("../img/icon-graduation.svg");
     }
   }
@@ -64,12 +64,12 @@
 }
 
 .services__title {
+  text-transform: uppercase;
+  color: $text-title-color;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 22px;
-  color: $text-title-color;
-  text-transform: uppercase;
 }
 
 .services__text {

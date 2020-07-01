@@ -1,8 +1,8 @@
   .about-us {
-    background-color: $bg-orange-color;
     display: flex;
     margin-bottom: -9px;
     color: $text-secondary-color;
+    background-color: $bg-orange-color;
   }
 
   .about-us__img {
@@ -17,10 +17,10 @@
 
   .about-us__title {
     @include title;
-    text-align: left;
-    font-size: 37px;
-    color: $text-secondary-color;
     margin-bottom: 32px;
+    text-align: left;
+    color: $text-secondary-color;
+    font-size: 37px;
   }
 
   .about-us__text {
@@ -32,14 +32,14 @@
 
   .about-us__link {
     @include links-default;
-    color: $text-secondary-color;
     padding: 21px 65px 22px 57px;
     border: 1px solid $btn-border-color;
+    color: $text-secondary-color;
 
     &:hover,
     &:focus {
-      background-color: $hover-links-color;
       color: $text-links-color;
+      background-color: $hover-links-color;
     }
 
     &:active {

@@ -1,26 +1,26 @@
 .works {
   display: flex;
-  padding-left: 381px;
   margin-bottom: 22px;
+  padding-left: 381px;
 }
 
 .works__item {
-  text-align: center;
-  width: 303px;
-  margin-bottom: 91px;
-  margin-right: 100px;
   position: relative;
+  width: 303px;
+  margin-right: 100px;
+  margin-bottom: 91px;
+  text-align: center;
 
   &::before {
-    content: "";
     position: absolute;
+    top: -197px;
+    left: 110px;
     width: 86px;
     height: 96px;
+    content: "";
     background-image: url("../img/icon-headphones.svg");
     background-repeat: no-repeat;
     background-position: center;
-    top: -197px;
-    left: 110px;
   }
 
   &--lock-open {
@@ -32,32 +32,32 @@
 
   &--upload {
     &::before {
-      width: 104px;
-      height: 104px;
       top: -200px;
       left: 95px;
+      width: 104px;
+      height: 104px;
       background-image: url("../img/icon-upload.svg");
     }
   }
 
   &--like {
     &::before {
-      height: 89px;
       top: -191px;
       left: 100px;
+      height: 89px;
       background-image: url("../img/icon-like.svg");
     }
   }
 }
 
 .works__title {
-  font-family: "Lato", "Arial", sans-serif;
-  font-weight: 700;
-  line-height: 22px;
-  color: $text-title-color;
   text-transform: uppercase;
   margin-bottom: 28px;
+  color: $text-title-color;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 25px;
+  font-weight: 700;
+  line-height: 22px;
 }
 
 .works__text {

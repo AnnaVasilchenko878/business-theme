@@ -1,4 +1,33 @@
-//!! ====================variables
+/*
+@import "base/variables.scss";
+@import "base/fonts.scss";
+@import "global/mixins.scss";
+@import "base/defaultstyle.scss";
+@import "global/header.scss";
+@import "components/nav.scss";
+@import "components/promo.scss";
+@import "components/our-services.scss";
+@import "components/services.scss";
+@import "components/about-us.scss";
+@import "components/price.scss";
+@import "components/price-card.scss";
+@import "components/price-structure";
+@import "components/how-works.scss";
+@import "components/works.scss";
+@import "components/reviews.scss";
+@import "components/client-reviews.scss";
+@import "components/newsletter.scss";
+@import "components/address.scss";
+@import "components/map.scss";
+@import "global/footer.scss";
+@import "global/footer-nav.scss";
+@import "global/footer-social.scss";
+@import "components/social.scss";
+@import "global/footer-copyright.scss";
+
+*/
+
+//====================variables
 
 $btn-links-color: #ffbb42;
 $btn-border-color: #e7ad48;
@@ -24,15 +53,15 @@ $border-color: #ccd5df;
 $border-secondary-color: #cbcbcb;
 $border-footer-nav: #e3e7ec;
 
-//!! ======================fonts 
+//======================fonts 
 
 @font-face {
   font-family: "Lato";
   font-style: normal;
   font-weight: 300;
   src: local("Lato"),
-  url("../fonts/Lato-Light.woff") format(woff),
-  url("../fonts/Lato-Light.woff2") format(woff2);
+    url("../fonts/Lato-Light.woff") format(woff),
+    url("../fonts/Lato-Light.woff2") format(woff2);
 }
 
 @font-face {
@@ -40,8 +69,8 @@ $border-footer-nav: #e3e7ec;
   font-style: normal;
   font-weight: 400;
   src: local("Lato"),
-  url("../fonts/Lato-Regular.woff") format(woff),
-  url("../fonts/Lato-Regular.woff2") format(woff2);
+    url("../fonts/Lato-Regular.woff") format(woff),
+    url("../fonts/Lato-Regular.woff2") format(woff2);
 }
 
 @font-face {
@@ -49,8 +78,8 @@ $border-footer-nav: #e3e7ec;
   font-style: normal;
   font-weight: 700;
   src: local("Lato"),
-  url("../fonts/Lato-Bold.woff") format(woff),
-  url("../fonts/Lato-Bold.woff2") format(woff2);
+    url("../fonts/Lato-Bold.woff") format(woff),
+    url("../fonts/Lato-Bold.woff2") format(woff2);
 }
 
 @font-face {
@@ -58,11 +87,11 @@ $border-footer-nav: #e3e7ec;
   font-style: normal;
   font-weight: 400;
   src: local("OpenSans"),
-  url("../fonts/OpenSans-Regular.woff") format(woff),
-  url("../fonts/OpenSans-Regular.woff2") format(woff2);
+    url("../fonts/OpenSans-Regular.woff") format(woff),
+    url("../fonts/OpenSans-Regular.woff2") format(woff2);
 }
 
-//!! =================mixins
+//=================mixins
 
 @mixin btn-default {
   font-family: "Lato", "Arial", sans-serif;
@@ -76,19 +105,23 @@ $border-footer-nav: #e3e7ec;
 }
 
 @mixin btn-state {
+
   &:hover,
   &:focus {
     color: $text-links-color;
     background-color: $hover-btn-color;
   }
+
   &:active {
     background-color: $active-btn-color;
   }
 }
+
 @mixin links-default {
   text-transform: uppercase;
   border-radius: 2px;
 }
+
 @mixin title {
   font-family: "Lato", "Arial", sans-serif;
   font-size: 40px;
@@ -98,23 +131,25 @@ $border-footer-nav: #e3e7ec;
   text-transform: uppercase;
   text-align: center;
 }
+
 @mixin subtitle {
   font-size: 22px;
   line-height: 22px;
   text-align: center;
   color: $text-title-color;
 }
-// !!============defaultstyles
+
+//============defaultstyle
 
 html {
-    box-sizing: border-box;
-  
+  box-sizing: border-box;
+
   *,
   *::before,
   *::after {
     box-sizing: inherit;
   }
-  
+
   body {
     padding: 0;
     width: 2267px;
@@ -122,99 +157,114 @@ html {
     font-weight: 400;
     font-size: 13px;
     line-height: 27px;
-    font-family: "Open Sans","Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     background-color: $bg-main-color;
     color: $text-main-color;
 
-  main {
-    position: relative;
-  }
+    main {
+      position: relative;
+    }
+
     a {
       text-decoration: none;
     }
+
     ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
+      padding: 0;
+      margin: 0;
+      list-style: none;
     }
+
     .visually-hidden:not(:focus):not(:active),
     input[type="checkbox"].visually-hidden,
     input[type="radio"].visually-hidden {
       position: absolute;
-  
+
       width: 1px;
       height: 1px;
       margin: -1px;
       padding: 0;
       overflow: hidden;
-  
+
       white-space: nowrap;
-  
+
       border: 0;
-  
+
       clip: rect(0, 0, 0, 0);
       clip-path: inset(100%);
     }
   }
 }
 
-//!! ==============header
+// ==============header
 
 .header {
   padding-left: 362px;
   padding-top: 22px;
   padding-bottom: 36px;
 }
+
 .header__wrapper {
   display: flex;
 }
+
 .header__logo {
   width: 50px;
   margin-right: 406px;
 }
+
 .header__list {
   width: 1296px;
   display: flex;
   margin-top: 15px;
 }
 
-//!!!=========nav
+//=========nav
 .nav__item {
   width: 135px;
   margin-right: 15px;
   padding: 12px 5px 12px 18px;
+
   &--home {
     padding-left: 46px;
     margin-right: -17px;
   }
+
   &--service {
     padding-left: 35px;
     margin-right: -4px;
   }
+
   &--about-us {
     padding-left: 29px;
     margin-right: 19px;
   }
+
   &--pricing {
     padding-left: 16px;
     margin-right: 44px;
   }
+
   &--how-work {
     margin-right: 48px;
   }
+
   &--happy-clients {
     padding-left: 12px;
     margin-right: 46px;
   }
+
   &:hover,
   &:focus {
     background-color: $btn-links-color;
     border-radius: 2px;
   }
+
   &:hover>.nav__link,
   &:focus>.nav__link {
     color: $text-secondary-color;
   }
+
   &:active>.nav__link {
     color: $text-links-color;
   }
@@ -228,7 +278,7 @@ html {
   color: $text-links-color;
 }
 
-// !!======== promo
+//======== promo
 .promo {
   background-color: $bg-blue-color;
   text-align: center;
@@ -246,20 +296,24 @@ html {
   margin-bottom: -8px;
   text-transform: uppercase;
 }
+
 .promo__text {
   @include subtitle;
   color: $text-secondary-color;
   margin-bottom: 44px;
 }
+
 .promo__list {
   display: flex;
   padding-left: 408px;
 }
+
 .promo__item {
   width: 281px;
   margin-right: 108px;
   position: relative;
-  &::before{
+
+  &::before {
     content: "";
     width: 25px;
     height: 22px;
@@ -270,22 +324,26 @@ html {
     left: 17px;
     display: block;
   }
-  &--user{
+
+  &--user {
     &::before {
       background-image: url("../img/icon-user.svg");
-      }
     }
-  &--email{
+  }
+
+  &--email {
     &::before {
       background-image: url("../img/icon-envelope.svg");
     }
   }
+
   &--phone {
     &::before {
       background-image: url("../img/icon-phone.svg");
     }
   }
 }
+
 .promo__input {
   padding-top: 25px;
   padding-bottom: 22px;
@@ -294,17 +352,19 @@ html {
   border: none;
   border-radius: 2px;
 
-  &::placeholder{
+  &::placeholder {
     color: $text-placeholder-color;
     text-transform: capitalize;
   }
 }
+
 .promo__button {
   @include btn-default;
   @include btn-state;
   padding: 21px 43px 21px 53px;
   margin-left: -4px;
 }
+
 .promo__image {
   position: absolute;
   width: 648px;
@@ -312,7 +372,8 @@ html {
   top: 412px;
   left: 701px;
 }
-//!!!===========our-services
+
+//===========our-services
 .our-services {
   padding-bottom: 63px;
   padding-top: 37px;
@@ -322,18 +383,20 @@ html {
   @include title;
   margin-bottom: -12px;
 }
+
 .our-services__text {
-@include subtitle;
+  @include subtitle;
   margin-bottom: 66px;
 }
 
-//!! ============ services
+//============ services
 
 .services {
   display: flex;
   flex-wrap: wrap;
   padding-left: 463px;
 }
+
 .services__item {
   width: 576px;
   margin-right: 246px;
@@ -351,13 +414,15 @@ html {
     top: 13px;
     left: -107px;
   }
+
   &--gear {
-    &::before{
+    &::before {
       top: 12px;
       left: -109px;
-    background-image: url("../img/icon-gear.svg");
+      background-image: url("../img/icon-gear.svg");
     }
   }
+
   &--graduation {
     &::before {
       width: 73px;
@@ -366,25 +431,31 @@ html {
       background-image: url("../img/icon-graduation.svg");
     }
   }
+
   &--rocket {
     &::before {
       background-image: url("../img/icon-rocket.svg");
     }
   }
+
   &--renren {
     margin-top: -28px;
+
     &::before {
       background-image: url("../img/icon-renren.svg");
     }
   }
+
   &--dollar {
     margin-top: -28px;
+
     &::before {
       left: -99px;
       background-image: url("../img/icon-dollar.svg");
     }
   }
 }
+
 .services__title {
   font-family: "Lato", "Arial", sans-serif;
   font-size: 20px;
@@ -393,10 +464,12 @@ html {
   color: $text-title-color;
   text-transform: uppercase;
 }
+
 .services__text {
   font-size: 19px;
 }
-//!! ===============about-us
+
+//===============about-us
 
 .about-us {
   color: $text-secondary-color;
@@ -404,14 +477,17 @@ html {
   display: flex;
   margin-bottom: -9px;
 }
+
 .about-us__img {
   width: 1133px;
 }
-.about-us__wrapper{
+
+.about-us__wrapper {
   width: 850px;
   padding-top: 192px;
   padding-left: 109px;
 }
+
 .about-us__title {
   @include title;
   text-align: left;
@@ -419,44 +495,50 @@ html {
   color: $text-secondary-color;
   margin-bottom: 32px;
 }
+
 .about-us__text {
   width: 699px;
   margin-bottom: 90px;
   font-size: 18px;
   line-height: 31px;
 }
+
 .about-us__link {
   @include links-default;
   color: $text-secondary-color;
   padding: 21px 65px 22px 57px;
   border: 1px solid $btn-border-color;
+
   &:hover,
   &:focus {
     background-color: $hover-links-color;
     color: $text-links-color;
   }
+
   &:active {
     background-color: $btn-border-color;
   }
 }
 
-//!! ================price
+//================price
 
 .price {
   background-color: $bg-grey-color;
   padding-top: 151px;
   padding-bottom: 259px;
 }
+
 .price__title {
   @include title;
   margin-bottom: -11px;
 }
+
 .price__text {
- @include subtitle;
+  @include subtitle;
   margin-bottom: 105px;
 }
 
-//!! ==============price-card
+//==============price-card
 
 .price-card {
   font-family: "Lato", "Arial", sans-serif;
@@ -465,6 +547,7 @@ html {
   display: flex;
   padding-left: 353px;
 }
+
 .price-card__item {
   width: 479px;
   background-color: $bg-main-color;
@@ -472,9 +555,11 @@ html {
   margin-right: 5px;
   text-align: center;
   border: 1px solid $border-color;
+
   &--premium {
     padding-left: 89px;
   }
+
   &:hover,
   &:focus {
     background-color: $bg-blue-color;
@@ -482,11 +567,13 @@ html {
     transform: scale(1.2);
   }
 }
-.price-card__title{
+
+.price-card__title {
   font-weight: 300;
   font-size: 29px;
   margin-bottom: 65px;
 }
+
 .price-card__cost {
   font-size: 79px;
   line-height: 22px;
@@ -508,12 +595,14 @@ html {
     left: 58px;
   }
 }
+
 .price-card__time {
   font-weight: 300;
   display: block;
   margin-bottom: 37px;
   font-size: 18px;
 }
+
 .price-card__link {
   @include links-default;
   color: $text-secondary-color;
@@ -526,6 +615,7 @@ html {
     color: $text-links-color;
     background-color: $hover-second-links;
   }
+
   &:active {
     background-color: $hover-links-color;
     border: 1px solid $hover-second-links;
@@ -533,32 +623,36 @@ html {
   }
 }
 
-// !!===========price-structure
+//===========price-structure
 
 .price-structure {
   margin-bottom: 42px;
 }
+
 .price-structure__item {
-  border-top: 1px solid $border-color; 
+  border-top: 1px solid $border-color;
   padding-top: 14px;
   padding-bottom: 12px;
   font-size: 17px;
 }
 
-//!!! =================how-works
+//=================how-works
 
 .how-works {
   padding-top: 176px;
   padding-bottom: 216px;
 }
+
 .how-works__title {
   @include title;
   margin-bottom: -9px;
 }
+
 .how-works__text {
-@include subtitle;
+  @include subtitle;
   margin-bottom: 335px;
 }
+
 .how-works__wrapper {
   width: 250px;
   margin: 0 auto;
@@ -571,24 +665,28 @@ html {
   padding: 20px 45px 21px 37px;
   font-size: 17px;
   margin-left: 15px;
+
   &:hover,
   &:focus {
     color: $text-links-color;
     background-color: $hover-btn-color;
   }
+
   &:active {
     background-color: $active-btn-color;
     border: 1px solid $text-links-color;
     border-radius: 2px;
   }
 }
-// !!=================works 
+
+//=================works 
 
 .works {
   display: flex;
   padding-left: 381px;
   margin-bottom: 22px;
 }
+
 .works__item {
   text-align: center;
   width: 303px;
@@ -607,12 +705,14 @@ html {
     top: -197px;
     left: 110px;
   }
+
   &--lock-open {
     &::before {
       left: 117px;
       background-image: url("../img/icon-lock-open.svg");
     }
   }
+
   &--upload {
     &::before {
       width: 104px;
@@ -622,29 +722,33 @@ html {
       background-image: url("../img/icon-upload.svg");
     }
   }
-&--like {
-  &::before {
-    height: 89px;
-    top: -191px;
-    left: 100px;
-    background-image: url("../img/icon-like.svg");
+
+  &--like {
+    &::before {
+      height: 89px;
+      top: -191px;
+      left: 100px;
+      background-image: url("../img/icon-like.svg");
+    }
   }
 }
-}
+
 .works__title {
-  font-family: "Lato","Arial", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-weight: 700;
   line-height: 22px;
   color: $text-title-color;
   text-transform: uppercase;
   margin-bottom: 28px;
   font-size: 25px;
-} 
+}
+
 .works__text {
   font-size: 19px;
   line-height: 30px;
 }
-// !!========================reviews 
+
+//========================reviews 
 
 .reviews {
   background-color: $bg-orange-color;
@@ -652,22 +756,26 @@ html {
   padding-top: 159px;
   padding-bottom: 185px;
 }
+
 .reviews__title {
-@include title;
-color: $text-secondary-color;
-margin-bottom: -9px;
+  @include title;
+  color: $text-secondary-color;
+  margin-bottom: -9px;
 }
+
 .reviews__text {
   @include subtitle;
   color: $text-secondary-color;
   margin-bottom: 79px;
 }
-// !!==========================client-reviews
+
+//==========================client-reviews
 .client-reviews {
   display: flex;
   flex-wrap: wrap;
   padding-left: 353px;
 }
+
 .client-reviews__item {
   background-color: $bg-main-color;
   color: $text-main-color;
@@ -679,15 +787,18 @@ margin-bottom: -9px;
   padding-bottom: 62px;
   display: flex;
 }
+
 .client-reviews__img {
   border-radius: 50%;
   width: 164px;
   margin-right: 46px;
 }
+
 .client-reviews__wrapper {
   width: 530px;
   margin-left: -45px;
 }
+
 .client-reviews__quote {
   text-align: left;
   margin-bottom: 20px;
@@ -720,6 +831,7 @@ margin-bottom: -9px;
     left: 193px;
   }
 }
+
 .client-reviews__autor {
   font-family: "Lato", "Arial", sans-serif;
   text-transform: uppercase;
@@ -728,29 +840,34 @@ margin-bottom: -9px;
   margin-left: 41px;
   font-size: 18px;
 }
+
 .client-reviews__position {
   color: $text-placeholder-color;
 }
 
-// !!!=========================newsletter
+//=========================newsletter
 
 .newsletter {
   color: $text-title-color;
   padding-top: 177px;
   padding-bottom: 53px;
 }
+
 .newsletter__title {
   @include title;
   margin-bottom: -8px;
 }
+
 .newsletter__text {
- @include subtitle;
+  @include subtitle;
   margin-bottom: 53px;
 }
+
 .newsletter__list {
   display: flex;
   padding-left: 509px;
 }
+
 .newsletter__item {
   width: 400px;
   position: relative;
@@ -766,11 +883,13 @@ margin-bottom: -9px;
     top: 20px;
     left: 21px;
   }
+
   &--user {
     &::before {
       background-image: url("../img/icon-user.svg");
     }
   }
+
   &--email {
     &::before {
       top: 22px;
@@ -779,20 +898,24 @@ margin-bottom: -9px;
     }
   }
 }
+
 .newsletter__input {
   padding: 26px 181px 19px 59px;
   border: 1px solid $border-secondary-color;
   border-radius: 2px;
+
   &::placeholder {
     color: $text-placeholder-color;
     font-size: 16px;
     text-transform: capitalize;
   }
+
   &--email {
     padding-right: 285px;
     padding-left: 62px;
   }
 }
+
 .newsletter__button {
   @include btn-default;
   @include btn-state;
@@ -800,7 +923,7 @@ margin-bottom: -9px;
   margin-left: 106px;
 }
 
-// !!==========adress
+//==========address
 
 .address {
   color: $text-address-color;
@@ -816,6 +939,7 @@ margin-bottom: -9px;
   left: 945px;
   z-index: 1;
 }
+
 .address__title {
   font-family: "Lato", "Arial", sans-serif;
   font-weight: 700;
@@ -824,24 +948,27 @@ margin-bottom: -9px;
   text-transform: uppercase;
   margin-bottom: -4px;
 }
+
 .address__text {
   font-size: 19px;
-    text-align: center;
-    line-height: 32px;
-    width: 208px;
-    padding-left: 22px;
+  text-align: center;
+  line-height: 32px;
+  width: 208px;
+  padding-left: 22px;
 }
+
 .address__link {
   color: $btn-links-color;
 }
 
-// !!===============map
+//===============map
 .map {
   position: relative;
   padding-top: 23px;
   padding-left: 400px;
   padding-bottom: 88px;
 }
+
 .map__logo-mark {
   position: absolute;
   width: 50px;
@@ -849,12 +976,13 @@ margin-bottom: -9px;
   top: 338px;
   left: 763px;
 }
-// !!=============footer============
+
+//=============footer============
 .footer {
   position: relative;
 }
 
-// !!===================footer-nav
+//===================footer-nav
 .footer-nav {
   display: flex;
   margin-bottom: 28px;
@@ -863,7 +991,7 @@ margin-bottom: -9px;
   position: relative;
 
   &::before {
-    content:  "";
+    content: "";
     position: absolute;
     width: 1562px;
     height: 2px;
@@ -872,28 +1000,35 @@ margin-bottom: -9px;
     left: 353px;
   }
 }
+
 .footer-nav__item {
   width: 158px;
   margin-right: -59px;
+
   &--service {
     margin-right: -40px;
   }
+
   &--about-us {
     margin-right: -26px;
   }
+
   &--pricing-table {
     margin-right: 15px;
   }
+
   &--how-work {
     margin-right: 9px;
   }
+
   &--happy {
     margin-right: 19px;
   }
 }
+
 .footer-nav__link {
   text-transform: uppercase;
-  font-family: "Lato","Arial", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-weight: 400;
   color: $text-title-color;
   font-size: 20px;
@@ -903,8 +1038,9 @@ margin-bottom: -9px;
 .footer-social {
   padding-bottom: 61px;
 }
+
 .footer-social__phone {
-  font-family: "Lato","Arial", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-weight: 400;
   font-size: 29px;
   color: $text-title-color;
@@ -925,23 +1061,27 @@ margin-bottom: -9px;
   }
 }
 
-//!! ===============social
+//===============social
 
 .social {
   display: flex;
   padding-left: 1063px;
 }
+
 .social__item {
   width: 16px;
   margin-right: 24px;
 }
+
 .social__icon {
   fill: $bg-blue-color;
+
   &:hover {
     fill: $btn-links-color;
   }
 }
-//!!! ==============footer-copyright 
+
+//==============footer-copyright 
 
 .footer-copyright {
   background-color: $bg-blue-color;
@@ -951,6 +1091,7 @@ margin-bottom: -9px;
   padding-top: 1px;
   padding-bottom: 1px;
 }
+
 .footer-copyright__text {
   font-size: 22px;
 }

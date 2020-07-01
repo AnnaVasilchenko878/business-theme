@@ -1,25 +1,25 @@
 .promo {
-  background-color: $bg-blue-color;
-  text-align: center;
+  position: relative;
+  margin-bottom: 203px;
   padding-top: 112px;
   padding-bottom: 462px;
-  margin-bottom: 203px;
-  position: relative;
+  text-align: center;
+  background-color: $bg-blue-color;
 }
 
 .promo__title {
+  margin-bottom: -8px;
+  text-transform: uppercase;
+  color: $text-secondary-color;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 46px;
   font-weight: 700;
-  color: $text-secondary-color;
-  margin-bottom: -8px;
-  text-transform: uppercase;
 }
 
 .promo__text {
   @include subtitle;
-  color: $text-secondary-color;
   margin-bottom: 44px;
+  color: $text-secondary-color;
 }
 
 .promo__list {
@@ -28,20 +28,21 @@
 }
 
 .promo__item {
+  position: relative;
   width: 281px;
   margin-right: 108px;
-  position: relative;
 
   &::before {
-    content: "";
-    width: 25px;
-    height: 22px;
     position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
+    display: block;
     top: 18px;
     left: 17px;
-    display: block;
+    width: 25px;
+    height: 22px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+
   }
 
   &--user {
@@ -64,30 +65,27 @@
 }
 
 .promo__input {
-  padding-top: 25px;
-  padding-bottom: 22px;
-  padding-left: 55px;
-  padding-right: 152px;
+  padding-top: 25px 152px 22px 55px;
   border: none;
   border-radius: 2px;
 
   &::placeholder {
-    color: $text-placeholder-color;
     text-transform: capitalize;
+    color: $text-placeholder-color;
   }
 }
 
 .promo__button {
   @include btn-default;
   @include btn-state;
-  padding: 21px 43px 21px 53px;
   margin-left: -4px;
+  padding: 21px 43px 21px 53px;
 }
 
 .promo__image {
   position: absolute;
-  width: 648px;
-  height: 344px;
   top: 412px;
   left: 701px;
+  width: 648px;
+  height: 344px;
 }

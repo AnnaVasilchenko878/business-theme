@@ -4,23 +4,23 @@
   padding: 12px 5px 12px 18px;
 
   &--home {
-    padding-left: 46px;
     margin-right: -17px;
+    padding-left: 46px;
   }
 
   &--service {
-    padding-left: 35px;
     margin-right: -4px;
+    padding-left: 35px;
   }
 
   &--about-us {
-    padding-left: 29px;
     margin-right: 19px;
+    padding-left: 29px;
   }
 
   &--pricing {
-    padding-left: 16px;
     margin-right: 44px;
+    padding-left: 16px;
   }
 
   &--how-work {
@@ -28,14 +28,14 @@
   }
 
   &--happy-clients {
-    padding-left: 12px;
     margin-right: 46px;
+    padding-left: 12px;
   }
 
   &:hover,
   &:focus {
-    background-color: $btn-links-color;
     border-radius: 2px;
+    background-color: $btn-links-color;
   }
 
   &:hover>.nav__link,
@@ -50,8 +50,8 @@
 
 .nav__link {
   @include links-default;
+  color: $text-links-color;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: $text-links-color;
 }
